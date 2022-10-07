@@ -25,7 +25,7 @@ public class VerificationToken extends  AbstractMappedEntity implements Serializ
     @Column(name = "verification_token_id", unique = true, nullable = false, updatable = false)
     private Integer verificationTokenId;
 
-    @Column(name = "verif_token")
+    @Column(name = "veriyf_token")
     private String token;
 
     @JsonFormat(pattern = AppConstant.LOCAL_DATE_FORMAT, shape = JsonFormat.Shape.STRING)
@@ -35,6 +35,5 @@ public class VerificationToken extends  AbstractMappedEntity implements Serializ
 
     @ManyToOne(fetch = FetchType.EAGER)
     @JoinColumn(name = "credential_id")
-
     private Credential credential;
 }
